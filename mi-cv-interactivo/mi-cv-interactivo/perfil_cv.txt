@@ -1,0 +1,71 @@
+PERFIL PROFESIONAL – MARÍA BESTARD FERNÁNDEZ
+
+== DATOS BÁSICOS ==
+Nombre: María Bestard Fernández
+Titular: Estudiante de ADE con Título Oficial en Data Science | Marketing de producto y finanzas
+Ciudad: Madrid, España (origen: Islas Baleares)
+Email: bestardfernandez@hotmail.com
+LinkedIn: https://www.linkedin.com/in/mariabestardfernandez/
+GitHub: https://github.com/mariabestard
+
+== RESUMEN ==
+Estudiante de último curso de Administración y Dirección de Empresas en ESIC University con formación oficial en Data Science. Combina visión de negocio con análisis de datos: ha trabajado en tesorería (Bankinter) y actualmente hace prácticas en marketing de producto de maquillaje para Lancôme en L'Oréal. Le apasiona usar los datos y la IA para entender al consumidor y tomar mejores decisiones comerciales.
+
+== EXPERIENCIA ==
+1) L'Oréal – Madrid, España (09/2026 – actualidad)
+   Puesto: Becaria de Marketing de Producto (Maquillaje) – Lancôme, División de Lujo
+   Funciones:
+   - Apoyo al equipo de marketing en el lanzamiento de novedades de maquillaje en España: calendario de lanzamiento, fichas de producto y argumentarios para las asesoras de belleza.
+   - Preparación de materiales para el punto de venta (perfumerías y grandes almacenes) en coordinación con trade marketing.
+   - Seguimiento semanal del sell-out por referencia y cliente con Excel y Power BI, y elaboración de informes para el equipo.
+   - Benchmark de marcas de lujo competidoras: precios, lanzamientos, campañas y activaciones en tienda y redes sociales.
+   - Apoyo al equipo digital y de comunicación en contenidos para redes sociales, colaboraciones con influencers y eventos de prensa.
+
+2) Bankinter – Madrid, España (03/2026 – 07/2026)
+   Puesto: Prácticas en Finanzas (Tesorería)
+   Funciones: gestión diaria de tesorería, revalorización por tipo de cambio, seguimiento de liquidez y procesamiento de pagos.
+
+3) Son Bernadinet (agroturismo) – Islas Baleares, España (05/2025 – 07/2025)
+   Puesto: Operations Assistant
+   Funciones: apoyo a las operaciones diarias, atención a huéspedes, coordinación de reservas, control básico de inventario y colaboración con equipos de distintas áreas.
+
+== FORMACIÓN ==
+- ESIC University, Madrid (09/2022 – actualidad): Grado en Administración y Dirección de Empresas + Título Oficial en Data Science.
+  Asignaturas relevantes: Marketing, Finanzas, Estadística, Análisis de Datos con Python, Visualización de Datos, Machine Learning aplicado a negocio, Investigación de Mercados.
+- Universidad de Belgrano, Buenos Aires, Argentina (07/2025 – 12/2025): Programa de intercambio en Administración de Empresas.
+- Colegio Nuestra Señora de Montesión, Baleares (2016 – 2022): Educación Secundaria y Bachillerato.
+
+== HABILIDADES TÉCNICAS ==
+- Software: Excel (avanzado: tablas dinámicas, BUSCARX), PowerPoint, Power BI, Tableau.
+- Programación y datos: Python (pandas, matplotlib, scikit-learn), Java, R / RStudio, SQL básico.
+- Herramientas de IA: Google Gemini (API y AI Studio), Google Antigravity, Google Vids, ChatGPT para productividad.
+
+== PROYECTOS ==
+1) Dashboard de rendimiento de ventas en retail (Data Science, ESIC)
+   Limpieza de un dataset de ventas de una cadena de retail con Python (pandas) y creación de un dashboard en Power BI con KPIs por tienda, categoría y mes. Resultado: identificación de las categorías con mayor margen y de los meses con caída de ventas, presentado como propuesta de acciones comerciales.
+
+2) Segmentación de clientes con Machine Learning (Data Science, ESIC)
+   Modelo de segmentación con K-Means (Python, scikit-learn) sobre datos de compra de clientes (recencia, frecuencia y valor). Se obtuvieron 4 segmentos con recomendaciones de marketing para cada uno. Proyecto en equipo de 4 personas.
+
+3) CV web interactivo con IA (2026)
+   Esta misma web: página desplegada en GitHub Pages con tres vídeos creados en Google Vids y un asistente conversacional con Gemini que responde a partir de este perfil. Desarrollada con ayuda de Google Antigravity.
+
+== IDIOMAS Y CERTIFICACIONES ==
+- Español: nativo
+- Inglés: C1 (TOEFL iBT)
+- Catalán: C1
+- Alemán: A2+ (EOI)
+- Título Oficial en Data Science (ESIC University)
+
+== OTRAS ACTIVIDADES ==
+- Delegada de la promoción 2024/2025 del grado de ADE en ESIC University (09/2024 – 05/2025).
+- Voluntariado en la Residencia Justo Dorado, Madrid: acompañamiento a personas mayores (09/2023 – 12/2023).
+- Colegio Mayor Vedruna, Madrid (09/2022 – 06/2024): participación activa en eventos, actividades culturales e iniciativas de estudiantes.
+
+== HABILIDADES BLANDAS ==
+Adaptabilidad (ha vivido y estudiado en Baleares, Madrid y Buenos Aires), trabajo en equipo, comunicación, gestión del tiempo, pensamiento crítico, creatividad y mucha proactividad.
+
+== DISPONIBILIDAD ==
+- Situación actual: en prácticas en L'Oréal (Lancôme) hasta finales del curso académico.
+- Busca: incorporación a jornada completa al terminar el grado (verano de 2027), en marketing, análisis de negocio o roles que combinen datos y negocio.
+- Modalidad: presencial o híbrida en Madrid; abierta a movilidad internacional.
