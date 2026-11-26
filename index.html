@@ -611,22 +611,37 @@ async function ask(question) {
   history.push({ role: "user", parts: [{ text: question }] });
 
   try {
-    const body = JSON.stringify({
+    // Pedimos el mínimo razonamiento posible para que responda rápido.
+    // Los modelos 3.x usan thinkingLevel; los 2.5 usan thinkingBudget.
+    const thinkingFor = m => /2\.5/.test(m) ? { thinkingBudget: 0 } : { thinkingLevel: "low" };
+    const bodyFor = (m, withThinking) => JSON.stringify({
       system_instruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
       contents: history.slice(-12),
-      generationConfig: { temperature: 0.3, maxOutputTokens: 2048 }
+      generationConfig: withThinking
+        ? { temperature: 0.3, maxOutputTokens: 2048, thinkingConfig: thinkingFor(m) }
+        : { temperature: 0.3, maxOutputTokens: 2048 }
     });
-    let res;
-    while (true) {
-      res = await fetch(endpointFor(MODELS[modelIndex]), {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "x-goog-api-key": key },
-        body
-      });
-      if (res.status === 404 && modelIndex < MODELS.length - 1) { modelIndex++; continue; }
-      break;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 40000);
+    let res, data, withThinking = true;
+    try {
+      while (true) {
+        const m = MODELS[modelIndex];
+        res = await fetch(endpointFor(m), {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "x-goog-api-key": key },
+          body: bodyFor(m, withThinking),
+          signal: controller.signal
+        });
+        data = await res.json().catch(() => null);
+        if (res.status === 404 && modelIndex < MODELS.length - 1) { modelIndex++; withThinking = true; continue; }
+        const msg = (data && data.error && data.error.message) || "";
+        if (res.status === 400 && withThinking && /think/i.test(msg)) { withThinking = false; continue; }
+        break;
+      }
+    } finally {
+      clearTimeout(timer);
     }
-    const data = await res.json().catch(() => null);
     typing.remove();
 
     if (!res.ok) {
@@ -647,7 +662,11 @@ async function ask(question) {
   } catch (err) {
     typing.remove();
     history.pop();
-    addMessage("error", "No hay conexión con Gemini. Comprueba tu conexión a internet y vuelve a intentarlo.");
+    if (err && err.name === "AbortError") {
+      addMessage("error", "Gemini está tardando demasiado en responder. Vuelve a enviar la pregunta en unos segundos.");
+    } else {
+      addMessage("error", "No hay conexión con Gemini. Comprueba tu conexión a internet y vuelve a intentarlo.");
+    }
   } finally {
     sendBtn.disabled = false;
     questionEl.focus();
